@@ -1,3 +1,4 @@
+import One.Terapevt;
 import Two.Apple;
 
 import java.lang.reflect.Field;
@@ -5,6 +6,8 @@ import java.lang.reflect.Field;
 public class Main {
     public static void main(String[] args) throws IllegalAccessException {
 
+        Terapevt terapevt = new Terapevt();
+        terapevt.proverca();
         //2-ая
         Apple apple = new Apple();
         Field[] fields = Apple.class.getDeclaredFields();
@@ -14,7 +17,7 @@ public class Main {
             System.out.println(fields[i].getType());
             System.out.println(fields[i].get(apple));
             String s = "color";
-            if (fields[i].getName() == s) {
+            if (fields[i].getName().equals(s)) {
                 fields[i].set(apple, "Red");
                 System.out.println(fields[i].get(apple));
             }
