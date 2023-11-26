@@ -1,7 +1,7 @@
 package One;
 
 public class Dantist {
-    public void healing() {
+    public static void healing() {
         System.out.println("Лечит Дантист");
     }
 }
