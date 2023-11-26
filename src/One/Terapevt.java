@@ -1,6 +1,8 @@
 package One;
 
-public class Terapevt extends Pacient  {
+import com.sun.tools.javac.Main;
+
+public class Terapevt extends Pacient{
     public void healing() {
         System.out.println("Лечит терапевт");
     }
@@ -9,15 +11,15 @@ public class Terapevt extends Pacient  {
       if(getPlan() == 1){
           doktor = "хирург";
           System.out.println("назначен " + doktor);
-          Xirurg xirurg = new Xirurg();
-          xirurg.healing();
+          Xirurg.healing();
+
       }
       else if(getPlan() == 2){
           doktor = "Дантист";
 
           System.out.println("назначен " + doktor);
-          Dantist dantist = new Dantist();
-          dantist.healing();
+
+          Dantist.healing();
       }
       else {
           doktor = "терапевт";
